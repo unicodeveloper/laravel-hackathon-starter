@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'unicodeveloper@laravel-hackathon-starter.com', 'name' => 'Laravel Hackathon Starter'],
 
     /*
     |--------------------------------------------------------------------------

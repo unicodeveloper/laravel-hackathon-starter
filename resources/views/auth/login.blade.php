@@ -33,6 +33,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-user"></i> Login</button>
+                    <a href="{{ url('/password/reset') }}" class="btn btn-link">Forgot your password?</a>
                 </div>
             </div>
         </form>
