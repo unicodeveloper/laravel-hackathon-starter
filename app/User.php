@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'fullname', 'username', 'email', 'password', 'provider_id', 'provider', 'avatar',
     ];
 
     /**
@@ -24,7 +24,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function getAvatarUrl(){
-        return "http://www.gravatar.com/avatar/" . md5(strtolower(trim($this->email))) . "?d=mm&s=40";
+    public function getAvatarUrl()
+    {
+        if(is_null($this->avatar)) {
+            return "http://www.gravatar.com/avatar/" . md5(strtolower(trim($this->email))) . "?d=mm&s=40";
+        }
+
+        return $this->avatar;
     }
 }

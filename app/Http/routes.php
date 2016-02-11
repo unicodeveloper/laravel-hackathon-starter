@@ -39,7 +39,6 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['guest']
     ]);
 
-
     Route::post('/login', [
         'uses' => 'Auth\AuthController@postLogin',
         'middleware' => ['guest']
@@ -50,6 +49,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
     Route::post('password/reset', 'Auth\PasswordController@reset');
 
+    // Social Authentication
+    Route::get('/auth/{provider}', 'OauthController@authenticate');
 
     Route::get('/signup', [
         'uses' => 'Auth\AuthController@getRegister',
@@ -57,7 +58,7 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['guest']
     ]);
 
-    Route::get('auth/logout', [
+    Route::get('logout', [
         'uses' => 'Auth\AuthController@logout',
         'as' => 'logout',
     ]);
