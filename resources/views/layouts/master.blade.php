@@ -20,10 +20,10 @@
         <p class="pull-left">© 2015 Company, Inc. All Rights Reserved</p>
         <ul class="pull-right list-inline">
             <li>
-                <a href="https://github.com/unicodeveloper/hackathon-starter">GitHub Project</a>
+                <a href="https://github.com/unicodeveloper/laravel-hackathon-starter">GitHub Project</a>
             </li>
             <li>
-                <a href="https://github.com/unicodeveloper/hackathon-starter/issues">Issues</a>
+                <a href="https://github.com/unicodeveloper/laravel-hackathon-starter/issues">Issues</a>
             </li>
         </ul>
         </div>
