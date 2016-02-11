@@ -49,7 +49,9 @@ class OauthController extends Controller
 
         $email = $this->isEmailExists($userData->getEmail()) ? null : $userData->getEmail();
 
-        $username = $this->isEmailExists($userData->getNickName()) ? null : $userData->getEmail();
+        $username = $this->isUsernameExists($userData->getNickName()) ? null : $userData->getNickName();
+
+        //dd($username);
 
         if (empty($user))  {
             $user = User::create([
@@ -61,8 +63,6 @@ class OauthController extends Controller
                 'provider'      => $provider,
             ]);
         }
-
-        $this->checkIfUserNeedsUpdating($userData, $user);
 
         return $user;
     }
