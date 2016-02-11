@@ -11,12 +11,8 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/api">API Examples</a>
-                </li>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/api">API Examples</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
