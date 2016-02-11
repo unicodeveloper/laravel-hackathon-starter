@@ -9,15 +9,23 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel Hackathon Starter is a boilerplate application developed with Laravel 5.2 to keep you ahead in hackathons.
 
-
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Thank you for considering contributing to Laravel Hackathon Starter. The contribution guide can be found in the [Contribution File](CONTRIBUTING.md)
 
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within Laravel Hackathon Starter, please send an e-mail to Prosper Otemuyiwa at prosperotemuyiwa@gmail.com. All security vulnerabilities will be promptly addressed.
 
+## How can I thank you?
+
+Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter or HackerNews? Spread the word!
+
+Don't forget to [follow me on twitter](https://twitter.com/unicodeveloper)!
+
+Thanks!
+Prosper Otemuyiwa.
+
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
