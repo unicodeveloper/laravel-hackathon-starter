@@ -21,7 +21,7 @@ class ContactController extends Controller
     {
         $this->validate($request, [
             'name'     => 'required|min:3',
-            'email' => 'required',
+            'email' => 'required|email|max:255',
             'message'    => 'required'
         ]);
 

@@ -33,6 +33,35 @@ Route::group(['middleware' => ['web']], function () {
         return view('apidashboard');
     });
 
+    Route::get('/login', [
+        'uses' => 'Auth\AuthController@getLogin',
+        'as'   => 'auth.login',
+        'middleware' => ['guest']
+    ]);
+
+
+    Route::post('/login', [
+        'uses' => 'Auth\AuthController@postLogin',
+        'middleware' => ['guest']
+    ]);
+
+
+    Route::get('/signup', [
+        'uses' => 'Auth\AuthController@getRegister',
+        'as'   => 'auth.register',
+        'middleware' => ['guest']
+    ]);
+
+    Route::get('auth/logout', [
+        'uses' => 'Auth\AuthController@logout',
+        'as' => 'logout',
+    ]);
+
+    Route::post('/signup', [
+        'uses' => 'Auth\AuthController@postRegister',
+        'middleware' => ['guest']
+    ]);
+
     Route::get('/contact', function () {
         return view('contact');
     });
