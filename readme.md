@@ -16,7 +16,7 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Prosper Otemuyiwa at prosperotemuyiwa@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Laravel Hackathon Starter, please send an e-mail to Prosper Otemuyiwa at prosperotemuyiwa@gmail.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
