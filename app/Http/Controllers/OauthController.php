@@ -47,13 +47,17 @@ class OauthController extends Controller
     {
         $user = User::where('provider_id', '=', $userData->id)->first();
 
+        $email = $this->isEmailExists($userData->getEmail()) ? null : $userData->getEmail();
+
+        $username = $this->isEmailExists($userData->getNickName()) ? null : $userData->getEmail();
+
         if (empty($user))  {
             $user = User::create([
                 'fullname'      => $userData->getName(),
-                'username'      => $userData->getNickName(),
+                'username'      => $username,
                 'provider_id'   => $userData->getId(),
                 'avatar'        => $userData->getAvatar(),
-                'email'         => $userData->getEmail(),
+                'email'         => $email,
                 'provider'      => $provider,
             ]);
         }
@@ -61,6 +65,20 @@ class OauthController extends Controller
         $this->checkIfUserNeedsUpdating($userData, $user);
 
         return $user;
+    }
+
+    private function isUsernameExists($username = null)
+    {
+        $username = User::whereUsername($username)->first()['username'];
+
+        return (! is_null($username)) ? true : false;
+    }
+
+    private function isEmailExists($email = null)
+    {
+        $email = User::whereEmail($email)->first()['email'];
+
+        return (! is_null($email)) ? true : false;
     }
 
     /**
@@ -73,7 +91,7 @@ class OauthController extends Controller
         $socialData = [
             'avatar' => $userData->getAvatar(),
             'fullname' => $userData->getName(),
-            'username' => $userData->getId(),
+            'username' => $userData->getNickName(),
         ];
 
         $dbData = [
@@ -85,7 +103,7 @@ class OauthController extends Controller
         if (! empty(array_diff($dbData, $socialData))) {
             $user->avatar = $userData->getAvatar();
             $user->fullname = $userData->getName();
-            $user->username = $userData->getId();
+            $user->username = $userData->getNickName();
             $user->save();
         }
     }
