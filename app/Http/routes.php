@@ -32,4 +32,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/api', function () {
         return view('apidashboard');
     });
+
+    Route::get('/contact', function () {
+        return view('contact');
+    });
 });
