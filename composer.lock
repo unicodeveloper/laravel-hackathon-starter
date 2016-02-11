@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "650b06413cdc02e263194a9c4fd9843a",
-    "content-hash": "205d3bac84374f9c6c594422171fdb10",
+    "hash": "20b6fb66ef5f01d3c125d22e913063c0",
+    "content-hash": "4d8d70069f250f0bb0ed357d0ad7c7ce",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1323,6 +1323,123 @@
                 "shell"
             ],
             "time": "2015-11-12 16:18:56"
+        },
+        {
+            "name": "socialiteproviders/instagram",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Instagram.git",
+                "reference": "bd9b11056e0296b69e75ce843ec44fe42c1be834"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Instagram/zipball/bd9b11056e0296b69e75ce843ec44fe42c1be834",
+                "reference": "bd9b11056e0296b69e75ce843ec44fe42c1be834",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "socialiteproviders/manager": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Instagram\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DraperStudio",
+                    "email": "hello@draperstud.io"
+                }
+            ],
+            "description": "Instagram OAuth2 Provider for Laravel Socialite",
+            "time": "2015-06-18 14:20:21"
+        },
+        {
+            "name": "socialiteproviders/linkedin",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/LinkedIn.git",
+                "reference": "95711f91b1bbe86a7bb7a224a89cff3060904076"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/LinkedIn/zipball/95711f91b1bbe86a7bb7a224a89cff3060904076",
+                "reference": "95711f91b1bbe86a7bb7a224a89cff3060904076",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "socialiteproviders/manager": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\LinkedIn\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DraperStudio",
+                    "email": "hello@draperstud.io"
+                }
+            ],
+            "description": "LinkedIn OAuth2 Provider for Laravel Socialite",
+            "time": "2015-12-26 14:19:56"
+        },
+        {
+            "name": "socialiteproviders/manager",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Manager.git",
+                "reference": "e7d4f0e35afb6d8beb42b4bc83b0a07d7a1536c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Manager/zipball/e7d4f0e35afb6d8beb42b4bc83b0a07d7a1536c1",
+                "reference": "e7d4f0e35afb6d8beb42b4bc83b0a07d7a1536c1",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "laravel/framework": "~5.0|~5.1|~5.2",
+                "laravel/socialite": "~2.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Manager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Wendt",
+                    "email": "andy@awendt.com"
+                }
+            ],
+            "description": "Easily add new or override built-in providers in Laravel Socialite.",
+            "time": "2016-01-18 20:15:43"
         },
         {
             "name": "swiftmailer/swiftmailer",

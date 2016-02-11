@@ -59,5 +59,17 @@ return [
         'redirect'      => env('GOOGLE_CALLBACK_URL')
     ],
 
+    'instagram' => [
+        'client_id'     => env('INSTAGRAM_CLIENT_ID'),
+        'client_secret' => env('INSTAGRAM_CLIENT_SECRET'),
+        'redirect'      => env('INSTAGRAM_CALLBACK_URL')
+    ],
+
+    'linkedin' => [
+        'client_id'     => env('LINKEDIN_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
+        'redirect'      => env('LINKEDIN_CALLBACK_URL')
+    ],
+
 
 ];
