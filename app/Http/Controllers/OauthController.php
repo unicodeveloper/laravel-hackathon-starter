@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use Illuminate\Contracts\Auth\Guard;
-use Laravel\Socialite\Contracts\Factory as Socialite;
 use App\User;
+use App\Http\Requests;
+use Illuminate\Contracts\Auth\Guard;
+use App\Http\Controllers\Controller;
+use Laravel\Socialite\Contracts\Factory as Socialite;
+
 
 class OauthController extends Controller
 {
