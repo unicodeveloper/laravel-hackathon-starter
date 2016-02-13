@@ -52,8 +52,6 @@ class OauthController extends Controller
 
         $username = $this->isUsernameExists($userData->getNickName()) ? null : $userData->getNickName();
 
-        //dd($username);
-
         if (empty($user))  {
             $user = User::create([
                 'fullname'      => $userData->getName(),
