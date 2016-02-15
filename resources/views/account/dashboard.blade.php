@@ -13,7 +13,5 @@
 
         @include('account.deleteAccount')
 
-        @include('account.linkedAccount')
-
     </div>
 @stop
