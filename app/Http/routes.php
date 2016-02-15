@@ -52,6 +52,12 @@ Route::group(['middleware' => ['web']], function () {
     // Social Authentication
     Route::get('/auth/{provider}', 'OauthController@authenticate');
 
+    Route::get('/account', [
+        'uses' => 'AccountController@getAccountPage',
+        'as'   => 'account.dashboard',
+        'middleware' => ['auth']
+    ]);
+
     Route::get('/signup', [
         'uses' => 'Auth\AuthController@getRegister',
         'as'   => 'auth.register',

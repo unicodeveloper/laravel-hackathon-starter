@@ -28,7 +28,7 @@
                     <img src="{{ Auth::user()->getAvatarUrl() }}" width="25" height="25" /> {{ Auth::user()->fullname }} <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><i class="fa fa-btn fa-user"></i> My Account</a></li>
+                    <li><a href="{{ route('account.dashboard') }}"><i class="fa fa-btn fa-user"></i> My Account</a></li>
                     <li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
                 </ul>
             </li>
