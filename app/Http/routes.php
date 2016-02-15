@@ -58,6 +58,43 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::post('/account/profile', [
+        'uses' => 'AccountController@updateProfile',
+        'as'   => 'account.profile',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/account/photo', [
+        'uses' => 'AccountController@updateAvatar',
+        'as'   => 'account.avatar',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/account/password', [
+        'uses' => 'AccountController@changePassword',
+        'as'   => 'account.password',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/account/delete/now', [
+        'uses' => 'AccountController@deleteAccount',
+        'as'   => 'account.delete.now',
+        'middleware' => ['auth']
+    ]);
+
+
+    Route::get('/account/confirm/delete', [
+        'uses' => 'AccountController@redirectToConfirmDeletePage',
+        'as'   => 'account.confirm.delete',
+        'middleware' => ['auth']
+    ]);
+
+    Route::get('/account/delete/later', [
+        'uses' => 'AccountController@dontDeleteAccount',
+        'as'   => 'account.dont.delete',
+        'middleware' => ['auth']
+    ]);
+
     Route::get('/signup', [
         'uses' => 'Auth\AuthController@getRegister',
         'as'   => 'auth.register',

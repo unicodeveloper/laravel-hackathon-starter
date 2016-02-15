@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "20b6fb66ef5f01d3c125d22e913063c0",
-    "content-hash": "4d8d70069f250f0bb0ed357d0ad7c7ce",
+    "hash": "13d628b7c39f0b459a9fc0ce7b0e43b8",
+    "content-hash": "98384b0e099dc1d935b68fce87ab9e3a",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -60,6 +60,58 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "cloudinary/cloudinary_php",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "3d82f544d6fd8e4135ab9712093840d20cec5bac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/3d82f544d6fd8e4135ab9712093840d20cec5bac",
+                "reference": "3d82f544d6fd8e4135ab9712093840d20cec5bac",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2016-01-28 13:48:02"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -568,6 +620,57 @@
                 "tokenizer"
             ],
             "time": "2015-12-05 17:17:57"
+        },
+        {
+            "name": "jrm2k6/cloudder",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jrm2k6/cloudder.git",
+                "reference": "406711dae7e5f23fb195806c048136ddebfa2ab5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jrm2k6/cloudder/zipball/406711dae7e5f23fb195806c048136ddebfa2ab5",
+                "reference": "406711dae7e5f23fb195806c048136ddebfa2ab5",
+                "shasum": ""
+            },
+            "require": {
+                "cloudinary/cloudinary_php": ">=1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "laravel/framework": ">=5.0",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JD\\Cloudder": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dagorn",
+                    "email": "jeremy.dagorn@gmail.com"
+                }
+            ],
+            "description": "Cloudinary API wrapper for Laravel",
+            "homepage": "https://github.com/jrm2k6/cloudder",
+            "keywords": [
+                "api",
+                "cloudinary",
+                "image",
+                "laravel",
+                "laravel4",
+                "upload"
+            ],
+            "time": "2015-11-29 20:28:50"
         },
         {
             "name": "laravel/framework",

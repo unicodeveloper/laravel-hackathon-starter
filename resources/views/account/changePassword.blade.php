@@ -2,7 +2,7 @@
         <h3>Change Password</h3>
     </div>
 
-    <form role="form" method="POST" action="{{ route('contact') }}" class="form-horizontal" _lpchecked="1">
+    <form role="form" method="POST" action="{{ route('account.password') }}" class="form-horizontal">
         {!! csrf_field() !!}
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
             <label for="password" class="col-sm-3 control-label">New Password</label>
@@ -13,12 +13,12 @@
                 @endif
             </div>
         </div>
-        <div class="form-group{{ $errors->has('conf_password') ? ' has-error' : '' }}">
+        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
             <label for="password" class="col-sm-3 control-label">Confirm Password</label>
             <div class="col-sm-4">
-                <input type="password" name="conf_password" id="password" class="form-control">
-                @if ($errors->has('conf_password'))
-                    <span class="help-block">{{ $errors->first('conf_password') }}</span>
+                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
+                @if ($errors->has('password_confirmation'))
+                    <span class="help-block">{{ $errors->first('password_confirmation') }}</span>
                 @endif
             </div>
         </div>

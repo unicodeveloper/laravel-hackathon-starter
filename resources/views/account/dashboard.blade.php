@@ -7,6 +7,8 @@
 
         @include('account.profileInfo')
 
+        @include('account.avatar')
+
         @include('account.changePassword')
 
         @include('account.deleteAccount')
