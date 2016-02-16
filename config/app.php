@@ -150,6 +150,7 @@ return [
         //Laravel\Socialite\SocialiteServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
+        GrahamCampbell\GitHub\GitHubServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -206,6 +207,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Cloudder'  => JD\Cloudder\Facades\Cloudder::class,
+        'GitHub'    => GrahamCampbell\GitHub\Facades\GitHub::class,
 
     ],
 

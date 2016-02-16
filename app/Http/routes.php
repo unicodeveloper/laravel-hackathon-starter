@@ -33,6 +33,12 @@ Route::group(['middleware' => ['web']], function () {
         return view('apidashboard');
     });
 
+    Route::get('/api/github', [
+        'uses' => 'GithubController@getPage',
+        'as'   => 'api.github',
+        'middleware' => ['auth']
+    ]);
+
     Route::get('/login', [
         'uses' => 'Auth\AuthController@getLogin',
         'as'   => 'auth.login',

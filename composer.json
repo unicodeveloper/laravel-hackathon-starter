@@ -10,7 +10,8 @@
         "laravel/socialite": "^2.0",
         "socialiteproviders/instagram": "^1.1",
         "socialiteproviders/linkedin": "^1.1",
-        "jrm2k6/cloudder": "^0.2.2"
+        "jrm2k6/cloudder": "^0.2.2",
+        "graham-campbell/github": "^4.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
