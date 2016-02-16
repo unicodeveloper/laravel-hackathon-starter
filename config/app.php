@@ -151,6 +151,7 @@ return [
         SocialiteProviders\Manager\ServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
+        Thujohn\Twitter\TwitterServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -208,6 +209,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Cloudder'  => JD\Cloudder\Facades\Cloudder::class,
         'GitHub'    => GrahamCampbell\GitHub\Facades\GitHub::class,
+        'Twitter'   => Thujohn\Twitter\Facades\Twitter::class,
 
     ],
 

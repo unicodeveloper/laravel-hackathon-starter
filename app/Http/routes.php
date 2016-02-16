@@ -39,6 +39,18 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/twitter', [
+        'uses' => 'TwitterController@getPage',
+        'as'   => 'api.twitter',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/tweet/new', [
+        'uses' => 'TwitterController@sendTweet',
+        'as'   => 'tweet.new',
+        'middleware' => ['auth']
+    ]);
+
     Route::get('/login', [
         'uses' => 'Auth\AuthController@getLogin',
         'as'   => 'auth.login',
