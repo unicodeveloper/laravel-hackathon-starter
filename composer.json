@@ -12,7 +12,8 @@
         "socialiteproviders/linkedin": "^1.1",
         "jrm2k6/cloudder": "^0.2.2",
         "graham-campbell/github": "^4.2",
-        "thujohn/twitter": "^2.1"
+        "thujohn/twitter": "^2.1",
+        "metalmatze/lastfm-api-wrapper": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -54,5 +55,7 @@
     },
     "config": {
         "preferred-install": "dist"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

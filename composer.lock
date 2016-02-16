@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c78ec846fa0ce4c35c3e74ea6849e733",
-    "content-hash": "f3fb9feb8fa914c32985e6d2bfdcf011",
+    "hash": "06b46c529a6c606138ec2d8eec704bb6",
+    "content-hash": "02b8833cc81ca7fe199508494b1e4f95",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -856,6 +856,54 @@
             "time": "2015-10-11 02:38:28"
         },
         {
+            "name": "kriswallsmith/buzz",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/Buzz.git",
+                "reference": "d4041666c3ffb379af02a92dabe81c904b35fab8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/d4041666c3ffb379af02a92dabe81c904b35fab8",
+                "reference": "d4041666c3ffb379af02a92dabe81c904b35fab8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Buzz": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Lightweight HTTP client",
+            "homepage": "https://github.com/kriswallsmith/Buzz",
+            "keywords": [
+                "curl",
+                "http client"
+            ],
+            "time": "2015-06-25 17:26:56"
+        },
+        {
             "name": "laravel/framework",
             "version": "v5.2.14",
             "source": {
@@ -1183,6 +1231,57 @@
                 "twitter"
             ],
             "time": "2015-10-23 04:02:07"
+        },
+        {
+            "name": "metalmatze/lastfm-api-wrapper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MetalMatze/lastfm-api-wrapper.git",
+                "reference": "e331c63bcb44017b4fcc1c8c27863ad07bf98ebe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MetalMatze/lastfm-api-wrapper/zipball/e331c63bcb44017b4fcc1c8c27863ad07bf98ebe",
+                "reference": "e331c63bcb44017b4fcc1c8c27863ad07bf98ebe",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/buzz": "dev-master",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MetalMatze\\LastFm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "MetalMatze",
+                    "email": "me@metalmatze.de",
+                    "homepage": "http://metalmatze.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Dead simple wrapper for the Last.fm API which returns the json.",
+            "homepage": "https://github.com/MetalMatze/lastfm-api-wrapper",
+            "keywords": [
+                "api",
+                "fm",
+                "last",
+                "last.fm",
+                "wrapper"
+            ],
+            "time": "2014-03-15 22:32:32"
         },
         {
             "name": "monolog/monolog",
@@ -3920,9 +4019,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "metalmatze/lastfm-api-wrapper": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.5.9"
