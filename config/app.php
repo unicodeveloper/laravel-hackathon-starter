@@ -152,6 +152,7 @@ return [
         JD\Cloudder\CloudderServiceProvider::class,
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
         Thujohn\Twitter\TwitterServiceProvider::class,
+        Aloha\Twilio\Support\Laravel\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -210,6 +211,7 @@ return [
         'Cloudder'  => JD\Cloudder\Facades\Cloudder::class,
         'GitHub'    => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Twitter'   => Thujohn\Twitter\Facades\Twitter::class,
+        'Twilio'    => Aloha\Twilio\Support\Laravel\Facade::class,
 
     ],
 

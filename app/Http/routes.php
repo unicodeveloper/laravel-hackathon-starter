@@ -75,6 +75,17 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/twilio', [
+        'uses' => 'TwilioController@getPage',
+        'as'   => 'api.twilio',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/api/twilio', [
+        'uses' => 'TwilioController@sendTextMessage',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/tweet/new', [
         'uses' => 'TwitterController@sendTweet',
         'as'   => 'tweet.new',
