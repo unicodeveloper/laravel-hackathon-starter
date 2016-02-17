@@ -69,6 +69,12 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/paypal', [
+        'uses' => 'PaypalController@getPage',
+        'as'   => 'api.paypal',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/tweet/new', [
         'uses' => 'TwitterController@sendTweet',
         'as'   => 'tweet.new',

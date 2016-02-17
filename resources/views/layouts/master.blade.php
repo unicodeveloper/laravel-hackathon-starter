@@ -16,7 +16,7 @@
     <div class="container">
         @yield('content')
     </div>
-    <footer>
+    <footer class="footer navbar-fixed-bottom">
         <div class="container text-center">
         <p class="pull-left">© 2015 Company, Inc. All Rights Reserved</p>
         <ul class="pull-right list-inline">
