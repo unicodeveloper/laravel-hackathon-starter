@@ -134,15 +134,6 @@
                 </a>
             </div>
             <div class="col-sm-4">
-                <a href="/api/venmo" style="color: #fff">
-                    <div style="background-color: #1f93cf" class="panel panel-default">
-                        <div class="panel-body">
-                            <img src="http://i.imgur.com/90tl9C8.gif" height="40"> Venmo
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-4">
                 <a href="/api/yahoo" style="color: #fff">
                     <div style="background-color: #3d048b" class="panel panel-default">
                         <div class="panel-body">

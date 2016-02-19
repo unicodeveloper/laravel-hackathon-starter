@@ -98,6 +98,17 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/clockwork', [
+        'uses' => 'ClockworkController@getPage',
+        'as'   => 'api.clockwork',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/api/clockwork', [
+        'uses' => 'ClockworkController@sendTextMessage',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/tweet/new', [
         'uses' => 'TwitterController@sendTweet',
         'as'   => 'tweet.new',

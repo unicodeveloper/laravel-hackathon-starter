@@ -29,7 +29,7 @@
                     <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
                         <label class="control-label">Number to text</label>
                         <input type="text" name="number" autofocus="" class="form-control">
-                         @if ($errors->has('number'))
+                        @if ($errors->has('number'))
                             <span class="help-block">{{ $errors->first('number') }}</span>
                         @endif
                     </div>
