@@ -48,8 +48,7 @@ class ClockworkController extends Controller
         $message = 'Testing Clockwork SMS #LaravelHackathonStarter';
 
         $response = $this->client->sendMessage($this->message);
-        dd($response);
 
-        //return redirect()->back()->with('info','Your Message has been sent successfully');
+        return redirect()->back()->with('info','Your Message has been sent successfully');
     }
 }
