@@ -88,6 +88,8 @@ git clone --depth=1 https://github.com/unicodeveloper/laravel-hackathon-starter.
 # Change directory
 cd myproject
 
+# Rename env.example to .env and fill in all the keys and secrets and also generate a secure key for the app using `php artisan key:generate`
+
 # Install Composer dependencies
 composer install
 
@@ -394,7 +396,7 @@ You need to add the following hidden input element to your form. This has been
 added in the existing codebase as part of the CSRF protection.
 
 ```
-{!! csrf_field()}
+{!! csrf_field() !!}
 ```
 
 
