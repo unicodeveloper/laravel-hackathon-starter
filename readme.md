@@ -1,8 +1,6 @@
 ![](https://cloud.githubusercontent.com/assets/2946769/13175239/6950a682-d709-11e5-910e-b065a6cf5617.jpg)
 
-# Laravel Hackathon Starter ![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
-[![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-hackathon-starter.svg)](https://travis-ci.org/unicodeveloper/laravel-hackathon-starter)
-[![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-hackathon-starter.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-hackathon-starter)
+# Laravel Hackathon Starter ![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)[![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-hackathon-starter.svg)](https://travis-ci.org/unicodeveloper/laravel-hackathon-starter)[![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-hackathon-starter.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-hackathon-starter)
 
 If you have attended any hackathons in the past, then you know how much time it takes to get a project started: decide on what to build, pick a programming language, pick a web framework, pick a CSS framework. A while later, you might have an initial project up on GitHub and only then can other team members start contributing. Or how about doing something as simple as *Sign in with Facebook* authentication? You can spend hours on it if you are not familiar with how OAuth 2.0 works.
 
