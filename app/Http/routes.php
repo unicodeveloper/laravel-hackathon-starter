@@ -109,6 +109,12 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/aviary', [
+        'uses' => 'AviaryController@getPage',
+        'as'   => 'api.aviary',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/tweet/new', [
         'uses' => 'TwitterController@sendTweet',
         'as'   => 'tweet.new',
