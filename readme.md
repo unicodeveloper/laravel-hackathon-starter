@@ -1,8 +1,6 @@
-# Laravel Hackathon Starter
+![](https://cloud.githubusercontent.com/assets/2946769/13175239/6950a682-d709-11e5-910e-b065a6cf5617.jpg)
 
-![](https://cloud.githubusercontent.com/assets/2946769/13175139/ab488b0a-d708-11e5-978f-cb8a3d376161.jpg)
-![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
-[![License](https://poser.pugx.org/unicodeveloper/laravel-hackathon-starter/license.svg)](LICENSE.md)
+# Laravel Hackathon Starter ![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
 [![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-hackathon-starter.svg)](https://travis-ci.org/unicodeveloper/laravel-hackathon-starter)
 [![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-hackathon-starter.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-hackathon-starter)
 
