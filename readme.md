@@ -93,6 +93,17 @@ cd myproject
 # Install Composer dependencies
 composer install
 
+# Run your migrations
+php artisan migrate
+
+# Publish the config files for the different service providers for Cloudder, Laravel Github, Twitter, Twilio by quickly checking their readme and following the steps
+*[Cloudder](https://github.com/jrm2k6/cloudder)
+*[Twitter](https://github.com/thujohn/twitter)
+*[Twilio](https://github.com/aloha/laravel-twilio)
+*[Github](https://github.com/GrahamCampbell/Laravel-GitHub)
+*[Socialite Providers](https://github.com/SocialiteProviders/Instagram)
+*[Socialite LinkedIn](https://github.com/SocialiteProviders/LinkedIn)
+
 php artisan serve
 ```
 
