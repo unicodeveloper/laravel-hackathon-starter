@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "909d6427383c2690823726e136439818",
-    "content-hash": "e7cc0db77e65fa01e1afbf40c8919496",
+    "hash": "ad47ef6c17fe0e3d3c5e77bce0f0d972",
+    "content-hash": "444a303992a7cf70e5e5cee8ea39de31",
     "packages": [
         {
             "name": "aloha/twilio",
@@ -166,54 +166,6 @@
                 "sdk"
             ],
             "time": "2016-01-28 13:48:02"
-        },
-        {
-            "name": "codeguy/arachnid",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/codeguy/arachnid.git",
-                "reference": "c8803e849ae2da62cbb399ee1d726125b43759e7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/codeguy/arachnid/zipball/c8803e849ae2da62cbb399ee1d726125b43759e7",
-                "reference": "c8803e849ae2da62cbb399ee1d726125b43759e7",
-                "shasum": ""
-            },
-            "require": {
-                "fabpot/goutte": "^3.1",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Arachnid": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Zeid Rashwani",
-                    "homepage": "http://zrashwani.com"
-                },
-                {
-                    "name": "Josh Lockhart",
-                    "homepage": "http://www.joshlockhart.com/"
-                }
-            ],
-            "description": "A crawler to find all unique internal pages on a given website",
-            "homepage": "http://github.com/codeguy/arachnid",
-            "keywords": [
-                "crawl",
-                "scrape",
-                "search",
-                "spider"
-            ],
-            "time": "2015-11-02 19:50:24"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

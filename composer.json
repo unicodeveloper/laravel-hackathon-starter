@@ -15,8 +15,7 @@
         "thujohn/twitter": "^2.1",
         "metalmatze/lastfm-api-wrapper": "dev-master",
         "aloha/twilio": "^2.0",
-        "fabpot/goutte": "^3.1",
-        "codeguy/arachnid": "^1.0"
+        "fabpot/goutte": "^3.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
