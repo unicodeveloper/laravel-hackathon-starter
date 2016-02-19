@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ae0d466f0f7d5d903a1344068b752d63",
-    "content-hash": "aff05d7618c239de751d40654163a2c5",
+    "hash": "bed12ab75165cdb3b13704ad3f6fb8ce",
+    "content-hash": "81057e0cee790b73efc12b8548b671b7",
     "packages": [
         {
             "name": "aloha/twilio",
@@ -1334,6 +1334,64 @@
                 "twitter"
             ],
             "time": "2015-10-23 04:02:07"
+        },
+        {
+            "name": "lob/lob-php",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lob/lob-php.git",
+                "reference": "fb5d87d7f8f04b7c160623be1a14a25b499ae8be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lob/lob-php/zipball/fb5d87d7f8f04b7c160623be1a14a25b499ae8be",
+                "reference": "fb5d87d7f8f04b7c160623be1a14a25b499ae8be",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": "~3.7",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "dompdf/dompdf": "0.6.*",
+                "phpunit/phpunit": "3.7.*",
+                "satooshi/php-coveralls": "2.*|1.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Lob\\Tests": "tests/",
+                    "Lob": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lob",
+                    "email": "support@lob.com",
+                    "homepage": "https://www.lob.com"
+                }
+            ],
+            "description": "Lob.com API PHP wrapper.",
+            "homepage": "https://www.lob.com/",
+            "keywords": [
+                "api",
+                "lob",
+                "printing",
+                "rest",
+                "web service",
+                "wrapper"
+            ],
+            "time": "2016-02-01 22:48:25"
         },
         {
             "name": "metalmatze/lastfm-api-wrapper",
