@@ -196,17 +196,6 @@ The same goes for other providers.
 
 <hr>
 
-<img src="https://s3.amazonaws.com/venmo/venmo_logo_blue.png" width="200">
-- Visit the **Account** section of your Venmo profile after logging in
-- Click on the **Developers** tab
-- Then click on the [new](https://venmo.com/account/app/new) link next to **Your Applications (0)**
-- Fill in the required fields: *App Name* and *What Will The App Be Used For?*
-- For **Web Redirect URL** enter: http://localhost:3000/auth/venmo/callback
-- Hit **Create** button
-- Back on the **Developers** tab click on **view** link next to **Your Applications (1) new**
-- Copy and paste **ID** and **Secret** keys into `.env` file
-
-<hr>
 
 <img src="https://stripe.com/img/about/logos/logos/black@2x.png" width="200">
 - [Sign up](https://stripe.com/) or log into your [dashboard](https://manage.stripe.com)
@@ -423,22 +412,6 @@ how a particular functionality works. Maybe you are just curious about
 how it works, or maybe you are lost and confused while reading the code,
 I hope it provides some guidance to you.
 
-###Custom HTML and CSS Design 101
-
-[HTML5 UP](http://html5up.net/) has many beautiful templates that you can download for free.
-
-When you download the ZIP file, it will come with *index.html*, *images*, *css* and *js* folders. So, how do you
-integrate it with Hackathon Starter? Hackathon Starter uses Bootstrap CSS framework, but these templates do not.
-Trying to use both CSS files at the same time will likely result in undesired effects.
-
-**Note:** Using the custom templates approach, you should understand that you cannot reuse any of the views I have created: layout, home page, api browser, login, signup, account management, contact. Those views were built using Bootstrap grid and styles. You will have to manually update the grid using a different syntax provided in the template. **Having said that, you can mix and match if you want to do so: Use Bootstrap for main app interface, and a custom template for a landing page.**
-
-Let's start from the beginning. For this example I will use [Escape Velocity](http://html5up.net/escape-velocity/) template:
-![Alt](http://html5up.net/uploads/images/escape-velocity.jpg)
-
-**Note:** For the sake of simplicity I will only consider `index.html`, and skip `left-sidebar.html`,
-`no-sidebar.html`, `right-sidebar.html`.
-
 <hr>
 
 ### How do flash messages work in this project?
@@ -472,19 +445,19 @@ checks if you are authenticated:
 ]);
 ```
 
-If you are authenticated, you let this visitor pass through your "door" by calling `return next();` in the auth middleware and if you are authenticated, you will be redirected to *Account Management* page, otherwise you will be redirected to *Login* page.
+If you are authenticated, you let this visitor pass through your "door" by calling `return $next($request);` in the auth middleware and if you are authenticated, you will be redirected to *Account Management* page, otherwise you will be redirected to *Login* page.
 
 Here is a typical workflow for adding new routes to your application. Let's say we are building
 a page that lists all books from database.
 
 **Step 1.** Start by defining a route.
 
-```js
+```php
 Route::get('/books', 'BookController@getBooks');
 ```
 ---
 
-**Step 2.** Create a new schema and a model `Book.php` inside the *app* directory. You can simply run `php artisan make:model Book`
+**Step 2.** Create a new model `Book.php` inside the *app* directory. You can simply run `php artisan make:model Book`
 
 ```php
 
@@ -498,13 +471,49 @@ class Book
      * @var array
      */
     protected $fillable = [
-        'name', 'author',
+        'name', 'isbn',
     ];
 }
 
 ```
 
-**Step 3.** Create a new controller file called `BookController` inside the *app/Http/Controllers* directory. You can simply run `php artisan make:controller BookController`
+**Step 3.** Create a migration file like so: `php artisan make:migration create_books_table`
+
+```php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateBooksTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('books', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('isbn');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('books');
+    }
+}
+```
+
+**Step 4.** Create a new controller file called `BookController` inside the *app/Http/Controllers* directory. You can simply run `php artisan make:controller BookController`
 
 ```php
 namespace App\Http\Controllers;
@@ -530,7 +539,7 @@ class BookController extends Controller
 }
 ```
 
-**Step 4.** Create `books.blade.php` template.
+**Step 5.** Create `books.blade.php` template.
 ```php
 @extends('layouts.master')
 
