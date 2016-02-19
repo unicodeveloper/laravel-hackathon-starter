@@ -86,6 +86,12 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/scraping', [
+        'uses' => 'WebScrapingController@getPage',
+        'as'   => 'api.scraping',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/tweet/new', [
         'uses' => 'TwitterController@sendTweet',
         'as'   => 'tweet.new',
