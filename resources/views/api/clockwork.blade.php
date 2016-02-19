@@ -9,8 +9,8 @@
         </div>
 
         <div class="btn-group btn-group-justified">
-            <a href="http://github.com/mediaburst/node-clockwork" target="_blank" class="btn btn-primary">
-                <i class="fa fa-check-square-o"></i> Clockwork Node
+            <a href="https://github.com/mjerwin/clockwork-sms" target="_blank" class="btn btn-primary">
+                <i class="fa fa-check-square-o"></i> Clockwork PHP
             </a>
             <a href="http://www.clockworksms.com/doc/clever-stuff/xml-interface/send-sms/" target="_blank" class="btn btn-primary">
                 <i class="fa fa-code-fork"></i> XML API

@@ -115,6 +115,12 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/lob', [
+        'uses' => 'LobController@getPage',
+        'as'   => 'api.lob',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/tweet/new', [
         'uses' => 'TwitterController@sendTweet',
         'as'   => 'tweet.new',

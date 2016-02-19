@@ -178,6 +178,15 @@
                     </div>
                 </a>
             </div>
+            <div class="col-sm-4">
+                <a href="/api/bitgo" style="color: #fff">
+                    <div style="background-color: #4d394b" class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://i.imgur.com/fbNYOzm.png" height="40"> Slack
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 @stop
