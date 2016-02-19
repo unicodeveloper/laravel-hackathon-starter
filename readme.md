@@ -1,5 +1,6 @@
 # Laravel Hackathon Starter
 
+![](https://cloud.githubusercontent.com/assets/2946769/13175139/ab488b0a-d708-11e5-978f-cb8a3d376161.jpg)
 ![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
 [![License](https://poser.pugx.org/unicodeveloper/laravel-hackathon-starter/license.svg)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-hackathon-starter.svg)](https://travis-ci.org/unicodeveloper/laravel-hackathon-starter)
@@ -497,7 +498,6 @@ class Book
 **Step 3.** Create a new controller file called `BookController` inside the *app/Http/Controllers* directory. You can simply run `php artisan make:controller BookController`
 
 ```php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -522,7 +522,7 @@ class BookController extends Controller
 ```
 
 **Step 4.** Create `books.blade.php` template.
-```blade
+```php
 @extends('layouts.master')
 
 @section('content')
@@ -543,8 +543,6 @@ class BookController extends Controller
 ```
 
 That's it!
-```
-
 <hr>
 
 Laravel Eloquent Cheatsheet
