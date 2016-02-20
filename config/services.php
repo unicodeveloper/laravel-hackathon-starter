@@ -71,5 +71,9 @@ return [
         'redirect'      => env('LINKEDIN_CALLBACK_URL')
     ],
 
+    'slack' => [
+        'token' => env('SLACK_TOKEN')
+    ]
+
 
 ];

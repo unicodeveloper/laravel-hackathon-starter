@@ -17,7 +17,8 @@
         "aloha/twilio": "^2.0",
         "fabpot/goutte": "^3.1",
         "mjerwin/clockwork-sms": "^0.9.1",
-        "lob/lob-php": "^1.6"
+        "lob/lob-php": "^1.6",
+        "vluzrmos/slack-api": "^0.4.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
