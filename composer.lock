@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bab88910d74755c37e3f6fbfe8fdf1cf",
-    "content-hash": "f7a13ef2fce35bc40fd0db8e7f1907aa",
+    "hash": "55eeef274563ec08b9230775594d0de2",
+    "content-hash": "f7e3c71f9fff6f81b9db7557e33660d3",
     "packages": [
         {
             "name": "aloha/twilio",
@@ -755,6 +755,33 @@
                 "uri"
             ],
             "time": "2016-01-23 01:23:02"
+        },
+        {
+            "name": "hownowstephen/php-foursquare",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hownowstephen/php-foursquare.git",
+                "reference": "f2f6d3656556bf3575f8beca5dd44109c999b5a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hownowstephen/php-foursquare/zipball/f2f6d3656556bf3575f8beca5dd44109c999b5a0",
+                "reference": "f2f6d3656556bf3575f8beca5dd44109c999b5a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FoursquareApi": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A simple PHP library for accessing the foursquare API (see: https://developer.foursquare.com)",
+            "time": "2015-06-08 14:19:23"
         },
         {
             "name": "jakub-onderka/php-console-color",

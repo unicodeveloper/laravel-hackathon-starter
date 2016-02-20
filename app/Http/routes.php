@@ -139,6 +139,12 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/foursquare', [
+        'uses' => 'FoursquareController@getPage',
+        'as'   => 'api.foursquare',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/slack/message', [
         'uses' => 'SlackController@sendMessageToTeam',
         'as'   => 'slack.message',
