@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->text('location')->nullable();
             $table->text('website')->nullable();
             $table->string('provider')->nullable();
+            $table->string('oauth_token')->nullable();
+            $table->string('oauth_token_secret')->nullable();
             $table->string('provider_id')->unique()->nullable();
             $table->string('avatar')->nullable();
             $table->rememberToken();

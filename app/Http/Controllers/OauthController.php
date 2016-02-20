@@ -9,6 +9,7 @@ use App\Http\Requests;
 use Illuminate\Contracts\Auth\Guard;
 use App\Http\Controllers\Controller;
 use Laravel\Socialite\Contracts\Factory as Socialite;
+use Session;
 
 
 class OauthController extends Controller
@@ -48,11 +49,16 @@ class OauthController extends Controller
     {
         $user = User::where('provider_id', '=', $userData->id)->first();
 
+        Session::put('provider', $provider);
+
         $email = $this->isEmailExists($userData->getEmail()) ? null : $userData->getEmail();
 
         $username = $this->isUsernameExists($userData->getNickName()) ? null : $userData->getNickName();
 
+        $tokenSecret = property_exists($userData, "tokenSecret") ? $userData->tokenSecret : null;
+
         if (empty($user))  {
+
             $user = User::create([
                 'fullname'      => $userData->getName(),
                 'username'      => $username,
@@ -60,7 +66,11 @@ class OauthController extends Controller
                 'avatar'        => $userData->getAvatar(),
                 'email'         => $email,
                 'provider'      => $provider,
+                'oauth_token'   => $userData->token,
+                'oauth_token_secret'   => $tokenSecret
             ]);
+
+            Session::put('provider', $provider);
         }
 
         return $user;

@@ -12,7 +12,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'fullname', 'username', 'email', 'password', 'provider_id', 'provider', 'avatar', 'gender', 'location', 'website',
+        'fullname', 'username', 'email', 'password', 'provider_id', 'provider',
+        'avatar', 'gender', 'location', 'website', 'oauth_token', 'oauth_token_secret'
     ];
 
     /**
@@ -31,5 +32,15 @@ class User extends Authenticatable
         }
 
         return $this->avatar;
+    }
+
+    public function getAccessToken()
+    {
+        return $this->oauth_token;
+    }
+
+    public function getAccessTokenSecret()
+    {
+        return $this->oauth_token_secret;
     }
 }

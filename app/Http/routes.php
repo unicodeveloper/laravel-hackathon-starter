@@ -127,6 +127,18 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/facebook', [
+        'uses' => 'FacebookController@getPage',
+        'as'   => 'api.facebook',
+        'middleware' => ['auth']
+    ]);
+
+    Route::get('/api/linkedin', [
+        'uses' => 'LinkedInController@getPage',
+        'as'   => 'api.linkedin',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/slack/message', [
         'uses' => 'SlackController@sendMessageToTeam',
         'as'   => 'slack.message',

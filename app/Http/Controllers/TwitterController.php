@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Twitter;
+use Session;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -29,6 +31,14 @@ class TwitterController extends Controller
      */
     public function getPage()
     {
+        if( Session::get('provider') !== 'twitter') {
+            Auth::logout();
+
+            Session::flush();
+
+            return redirect('/auth/twitter');
+        }
+
         $searchedTweets = json_decode($this->searchForTweets($this->searchItem), true);
 
         return view('api.twitter')->withTweets($searchedTweets['statuses']);
@@ -65,6 +75,8 @@ class TwitterController extends Controller
         ]);
 
         $tweet = $request->input('tweet') . ' #LaravelHackathonStarter';
+
+        Twitter::reconfig(['token' => Auth::user()->getAccessToken(), 'secret' => Auth::user()->getAccessTokenSecret()]);
 
         Twitter::postTweet(['status' => $tweet, 'format' => 'json']);
 
