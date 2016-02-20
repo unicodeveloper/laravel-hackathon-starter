@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a3303fb51e86b37a7d654ff8f3f276a4",
-    "content-hash": "e64bd17e23e1dfac307b8ffc9c2ac606",
+    "hash": "bab88910d74755c37e3f6fbfe8fdf1cf",
+    "content-hash": "f7a13ef2fce35bc40fd0db8e7f1907aa",
     "packages": [
         {
             "name": "aloha/twilio",
@@ -2040,6 +2040,43 @@
                 "shell"
             ],
             "time": "2015-11-12 16:18:56"
+        },
+        {
+            "name": "socialiteproviders/foursquare",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Foursquare.git",
+                "reference": "4309f912183124e4b2148dfb496c08d16354b648"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Foursquare/zipball/4309f912183124e4b2148dfb496c08d16354b648",
+                "reference": "4309f912183124e4b2148dfb496c08d16354b648",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "socialiteproviders/manager": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Foursquare\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DraperStudio",
+                    "email": "hello@draperstud.io"
+                }
+            ],
+            "description": "Foursquare OAuth2 Provider for Laravel Socialite",
+            "time": "2015-10-14 13:29:59"
         },
         {
             "name": "socialiteproviders/instagram",

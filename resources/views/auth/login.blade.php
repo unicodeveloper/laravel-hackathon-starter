@@ -45,6 +45,7 @@
         <a href="/auth/google" class="btn btn-block btn-google btn-social"><i class="fa fa-google-plus"></i>Sign in with Google</a>
         <a href="/auth/github" class="btn btn-block btn-github btn-social"><i class="fa fa-github"></i>Sign in with GitHub</a>
         <a href="/auth/linkedin" class="btn btn-block btn-linkedin btn-social"><i class="fa fa-linkedin"></i>Sign in with LinkedIn</a>
-        <a href="/auth/instagram" class="btn btn-block btn-instagram btn-social"><i class="fa fa-instagram"></i>Sign in with Instagram</a>
+        <a href="/auth/foursquare" class="btn btn-block btn-foursquare btn-social"><i class="fa fa-foursquare"></i>Sign in with Foursquare</a>
+        <a href="/auth/bitbucket" class="btn btn-block btn-bitbucket btn-social"><i class="fa fa-bitbucket"></i>Sign in with Bitbucket</a>
     </div>
 @stop

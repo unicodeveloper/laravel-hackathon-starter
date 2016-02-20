@@ -20,7 +20,8 @@
         "lob/lob-php": "^1.6",
         "vluzrmos/slack-api": "^0.4.6",
         "vinkla/facebook": "^2.0",
-        "linkedinapi/linkedin": "^1.1"
+        "linkedinapi/linkedin": "^1.1",
+        "socialiteproviders/foursquare": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
