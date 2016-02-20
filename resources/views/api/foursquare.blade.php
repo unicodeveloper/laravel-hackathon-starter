@@ -9,13 +9,10 @@
         </div>
 
         <div class="btn-group btn-group-justified">
-            <a href="https://developers.facebook.com/docs/graph-api/quickstart/" target="_blank" class="btn btn-primary">
-                <i class="fa fa-check-square-o"></i> Quickstart
+            <a href="https://github.com/hownowstephen/php-foursquare" target="_blank" class="btn btn-primary">
+                <i class="fa fa-check-square-o"></i> PHP Foursquare API
             </a>
-            <a href="https://developers.facebook.com/tools/explorer" target="_blank" class="btn btn-primary">
-                <i class="fa fa-facebook"></i> Graph API Explorer
-            </a>
-            <a href="https://developers.facebook.com/docs/graph-api/reference/" target="_blank" class="btn btn-primary">
+            <a href="https://developer.foursquare.com/docs/" target="_blank" class="btn btn-primary">
                 <i class="fa fa-code-fork"></i> API Reference
             </a>
         </div>
