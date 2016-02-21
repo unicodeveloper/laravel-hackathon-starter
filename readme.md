@@ -82,11 +82,11 @@ Getting Started
 The easiest way to get started is to clone the repository:
 
 ```bash
-# Get the latest snapshot
-git clone --depth=1 https://github.com/unicodeveloper/laravel-hackathon-starter.git myproject
+# Get the project
+git clone https://github.com/unicodeveloper/laravel-hackathon-starter.git hackathon-starter-pack
 
 # Change directory
-cd myproject
+cd hackathon-starter-pack
 
 # Rename env.example to .env and fill in all the keys and secrets and also generate a secure key for the app using `php artisan key:generate`
 
