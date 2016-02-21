@@ -87,8 +87,7 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::get('yahoo', [
             'uses' => 'YahooController@getPage',
-            'as'   => 'api.yahoo',
-            'middleware' => ['auth']
+            'as'   => 'api.yahoo'
         ]);
 
         Route::get('clockwork', [
