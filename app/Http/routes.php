@@ -145,6 +145,19 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/api/instagram', [
+        'uses' => 'InstagramController@getPage',
+        'as'   => 'api.instagram',
+        'middleware' => ['auth']
+    ]);
+
+    Route::get('/api/tumblr', [
+        'uses' => 'TumblrController@getPage',
+        'as'   => 'api.tumblr',
+        'middleware' => ['auth']
+    ]);
+
+
     Route::post('/slack/message', [
         'uses' => 'SlackController@sendMessageToTeam',
         'as'   => 'slack.message',

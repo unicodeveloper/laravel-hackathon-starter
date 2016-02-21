@@ -22,7 +22,8 @@
         "vinkla/facebook": "^2.0",
         "linkedinapi/linkedin": "^1.1",
         "socialiteproviders/foursquare": "^1.1",
-        "hownowstephen/php-foursquare": "1.2.*"
+        "hownowstephen/php-foursquare": "1.2.*",
+        "jaapz/tumblr": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

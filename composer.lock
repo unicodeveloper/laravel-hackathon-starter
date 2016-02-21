@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "55eeef274563ec08b9230775594d0de2",
-    "content-hash": "f7e3c71f9fff6f81b9db7557e33660d3",
+    "hash": "6f4094de582f3a23e7c3f46ace887ead",
+    "content-hash": "c9a9d264a540208f021551fdbddd564b",
     "packages": [
         {
             "name": "aloha/twilio",
@@ -782,6 +782,49 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "A simple PHP library for accessing the foursquare API (see: https://developer.foursquare.com)",
             "time": "2015-06-08 14:19:23"
+        },
+        {
+            "name": "jaapz/tumblr",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaapz/Tumblr.git",
+                "reference": "d0ec9f45fedda7522b07555cef5d033a2f929819"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaapz/Tumblr/zipball/d0ec9f45fedda7522b07555cef5d033a2f929819",
+                "reference": "d0ec9f45fedda7522b07555cef5d033a2f929819",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Tumblr": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BEER-WARE LICENSE"
+            ],
+            "authors": [
+                {
+                    "name": "Jaap Broekhuizen",
+                    "email": "jaapz.b@gmail.com",
+                    "homepage": "http://jaap.broekhuizen.nu"
+                }
+            ],
+            "description": "Tumblr API wrapper for PHP 5.3",
+            "homepage": "https://github.com/jaapz/Tumblr",
+            "keywords": [
+                "api",
+                "tumblr"
+            ],
+            "time": "2013-02-27 08:38:03"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3510,6 +3553,49 @@
     ],
     "packages-dev": [
         {
+            "name": "cosenary/instagram",
+            "version": "v2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cosenary/Instagram-PHP-API.git",
+                "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cosenary/Instagram-PHP-API/zipball/fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
+                "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MetzWeb\\Instagram\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Metz",
+                    "email": "christian-metz1@gmx.net",
+                    "homepage": "http://metzweb.net"
+                }
+            ],
+            "description": "An easy-to-use PHP Class for accessing Instagram's API.",
+            "homepage": "https://github.com/cosenary/Instagram-PHP-API",
+            "keywords": [
+                "api",
+                "instagram"
+            ],
+            "time": "2014-11-29 13:10:42"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
             "source": {
@@ -4626,7 +4712,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "metalmatze/lastfm-api-wrapper": 20
+        "metalmatze/lastfm-api-wrapper": 20,
+        "jaapz/tumblr": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
