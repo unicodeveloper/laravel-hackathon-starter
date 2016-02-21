@@ -64,7 +64,7 @@
             "php artisan clear-compiled"
         ],
         "post-update-cmd": [
-            "php artisan migrate"
+            "php artisan optimize"
         ]
     },
     "config": {
