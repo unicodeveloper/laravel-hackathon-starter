@@ -33,135 +33,120 @@ Route::group(['middleware' => ['web']], function () {
         return view('apidashboard');
     });
 
-    Route::get('/api/github', [
-        'uses' => 'GithubController@getPage',
-        'as'   => 'api.github',
-        'middleware' => ['auth']
-    ]);
+    Route::group(['prefix' => 'api'], function() {
+        Route::get('github', [
+            'uses' => 'GithubController@getPage',
+            'as'   => 'api.github',
+            'middleware' => ['auth']
+        ]);
 
-    Route::get('/api/twitter', [
-        'uses' => 'TwitterController@getPage',
-        'as'   => 'api.twitter',
-        'middleware' => ['auth']
-    ]);
+        Route::get('twitter', [
+            'uses' => 'TwitterController@getPage',
+            'as'   => 'api.twitter',
+            'middleware' => ['auth']
+        ]);
 
-    Route::get('/api/lastfm', [
-        'uses' => 'LastFmController@getPage',
-        'as'   => 'api.lastfm',
-        'middleware' => ['auth']
-    ]);
+        Route::get('lastfm', [
+            'uses' => 'LastFmController@getPage',
+            'as'   => 'api.lastfm'
+        ]);
 
-    Route::get('/api/nyt', [
-        'uses' => 'NytController@getPage',
-        'as'   => 'api.nyt',
-        'middleware' => ['auth']
-    ]);
+        Route::get('nyt', [
+            'uses' => 'NytController@getPage',
+            'as'   => 'api.nyt'
+        ]);
 
-    Route::get('/api/steam', [
-        'uses' => 'SteamController@getPage',
-        'as'   => 'api.steam',
-        'middleware' => ['auth']
-    ]);
+        Route::get('steam', [
+            'uses' => 'SteamController@getPage',
+            'as'   => 'api.steam'
+        ]);
 
-    Route::get('/api/stripe', [
-        'uses' => 'StripeController@getPage',
-        'as'   => 'api.stripe',
-        'middleware' => ['auth']
-    ]);
+        Route::get('stripe', [
+            'uses' => 'StripeController@getPage',
+            'as'   => 'api.stripe'
+        ]);
 
-    Route::get('/api/paypal', [
-        'uses' => 'PaypalController@getPage',
-        'as'   => 'api.paypal',
-        'middleware' => ['auth']
-    ]);
+        Route::get('paypal', [
+            'uses' => 'PaypalController@getPage',
+            'as'   => 'api.paypal'
+        ]);
 
-    Route::get('/api/twilio', [
-        'uses' => 'TwilioController@getPage',
-        'as'   => 'api.twilio',
-        'middleware' => ['auth']
-    ]);
+        Route::get('twilio', [
+            'uses' => 'TwilioController@getPage',
+            'as'   => 'api.twilio'
+        ]);
 
-    Route::post('/api/twilio', [
-        'uses' => 'TwilioController@sendTextMessage',
-        'middleware' => ['auth']
-    ]);
+        Route::post('twilio', [
+            'uses' => 'TwilioController@sendTextMessage'
+        ]);
 
-    Route::get('/api/scraping', [
-        'uses' => 'WebScrapingController@getPage',
-        'as'   => 'api.scraping',
-        'middleware' => ['auth']
-    ]);
+        Route::get('scraping', [
+            'uses' => 'WebScrapingController@getPage',
+            'as'   => 'api.scraping'
+        ]);
 
-    Route::get('/api/yahoo', [
-        'uses' => 'YahooController@getPage',
-        'as'   => 'api.yahoo',
-        'middleware' => ['auth']
-    ]);
+        Route::get('yahoo', [
+            'uses' => 'YahooController@getPage',
+            'as'   => 'api.yahoo',
+            'middleware' => ['auth']
+        ]);
 
-    Route::get('/api/clockwork', [
-        'uses' => 'ClockworkController@getPage',
-        'as'   => 'api.clockwork',
-        'middleware' => ['auth']
-    ]);
+        Route::get('clockwork', [
+            'uses' => 'ClockworkController@getPage',
+            'as'   => 'api.clockwork'
+        ]);
 
-    Route::post('/api/clockwork', [
-        'uses' => 'ClockworkController@sendTextMessage',
-        'middleware' => ['auth']
-    ]);
+        Route::post('clockwork', [
+            'uses' => 'ClockworkController@sendTextMessage'
+        ]);
 
-    Route::get('/api/aviary', [
-        'uses' => 'AviaryController@getPage',
-        'as'   => 'api.aviary',
-        'middleware' => ['auth']
-    ]);
+        Route::get('aviary', [
+            'uses' => 'AviaryController@getPage',
+            'as'   => 'api.aviary'
+        ]);
 
-    Route::get('/api/lob', [
-        'uses' => 'LobController@getPage',
-        'as'   => 'api.lob',
-        'middleware' => ['auth']
-    ]);
+        Route::get('lob', [
+            'uses' => 'LobController@getPage',
+            'as'   => 'api.lob'
+        ]);
 
-    Route::get('/api/slack', [
-        'uses' => 'SlackController@getPage',
-        'as'   => 'api.slack',
-        'middleware' => ['auth']
-    ]);
+        Route::get('slack', [
+            'uses' => 'SlackController@getPage',
+            'as'   => 'api.slack'
+        ]);
 
-    Route::get('/api/facebook', [
-        'uses' => 'FacebookController@getPage',
-        'as'   => 'api.facebook',
-        'middleware' => ['auth']
-    ]);
+        Route::get('facebook', [
+            'uses' => 'FacebookController@getPage',
+            'as'   => 'api.facebook',
+            'middleware' => ['auth']
+        ]);
 
-    Route::get('/api/linkedin', [
-        'uses' => 'LinkedInController@getPage',
-        'as'   => 'api.linkedin',
-        'middleware' => ['auth']
-    ]);
+        Route::get('linkedin', [
+            'uses' => 'LinkedInController@getPage',
+            'as'   => 'api.linkedin',
+            'middleware' => ['auth']
+        ]);
 
-    Route::get('/api/foursquare', [
-        'uses' => 'FoursquareController@getPage',
-        'as'   => 'api.foursquare',
-        'middleware' => ['auth']
-    ]);
+        Route::get('foursquare', [
+            'uses' => 'FoursquareController@getPage',
+            'as'   => 'api.foursquare'
+        ]);
 
-    Route::get('/api/instagram', [
-        'uses' => 'InstagramController@getPage',
-        'as'   => 'api.instagram',
-        'middleware' => ['auth']
-    ]);
+        Route::get('instagram', [
+            'uses' => 'InstagramController@getPage',
+            'as'   => 'api.instagram',
+            'middleware' => ['auth']
+        ]);
 
-    Route::get('/api/tumblr', [
-        'uses' => 'TumblrController@getPage',
-        'as'   => 'api.tumblr',
-        'middleware' => ['auth']
-    ]);
-
+        Route::get('tumblr', [
+            'uses' => 'TumblrController@getPage',
+            'as'   => 'api.tumblr'
+        ]);
+    });
 
     Route::post('/slack/message', [
         'uses' => 'SlackController@sendMessageToTeam',
-        'as'   => 'slack.message',
-        'middleware' => ['auth']
+        'as'   => 'slack.message'
     ]);
 
     Route::post('/tweet/new', [

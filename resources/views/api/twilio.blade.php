@@ -28,7 +28,7 @@
                    {!! csrf_field() !!}
                     <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
                         <label class="control-label">Number to text</label>
-                        <input type="text" name="number" autofocus="" class="form-control">
+                        <input type="text" name="number" autofocus="" class="form-control" placeholder="e.g +2347089740924">
                         @if ($errors->has('number'))
                             <span class="help-block">{{ $errors->first('number') }}</span>
                         @endif
