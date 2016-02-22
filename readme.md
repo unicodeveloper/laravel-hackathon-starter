@@ -393,7 +393,7 @@ Recommended Laravel Libraries
 FAQ
 ---
 
-### Why do I get `Token Mismatch Exceptiom` when submitting a form?
+### Why do I get `Token Mismatch Exception` when submitting a form?
 You need to add the following hidden input element to your form. This has been
 added in the existing codebase as part of the CSRF protection.
 
