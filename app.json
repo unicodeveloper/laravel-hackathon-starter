@@ -1,0 +1,151 @@
+{
+  "name": "laravel-hackathon-starter",
+  "scripts": {
+  },
+  "env": {
+    "APP_DEBUG": {
+      "required": true
+    },
+    "APP_ENV": {
+      "required": true
+    },
+    "APP_KEY": {
+      "required": true
+    },
+    "BUILDPACK_URL": {
+      "required": true
+    },
+    "CLOCKWORK_API_KEY": {
+      "required": true
+    },
+    "CLOUDINARY_API_KEY": {
+      "required": true
+    },
+    "CLOUDINARY_API_SECRET": {
+      "required": true
+    },
+    "CLOUDINARY_CLOUD_NAME": {
+      "required": true
+    },
+    "DB_DATABASE": {
+      "required": true
+    },
+    "DB_HOST": {
+      "required": true
+    },
+    "DB_PASSWORD": {
+      "required": true
+    },
+    "DB_USERNAME": {
+      "required": true
+    },
+    "FACEBOOK_CALLBACK_URL": {
+      "required": true
+    },
+    "FACEBOOK_CLIENT_ID": {
+      "required": true
+    },
+    "FACEBOOK_CLIENT_SECRET": {
+      "required": true
+    },
+    "FOURSQUARE_CALLBACK_URL": {
+      "required": true
+    },
+    "FOURSQUARE_CLIENT_ID": {
+      "required": true
+    },
+    "FOURSQUARE_CLIENT_SECRET": {
+      "required": true
+    },
+    "GITHUB_CALLBACK_URL": {
+      "required": true
+    },
+    "GITHUB_CLIENT_ID": {
+      "required": true
+    },
+    "GITHUB_CLIENT_SECRET": {
+      "required": true
+    },
+    "LASTFM_API_KEY": {
+      "required": true
+    },
+    "LASTFM_API_SECRET": {
+      "required": true
+    },
+    "LINKEDIN_CALLBACK_URL": {
+      "required": true
+    },
+    "LINKEDIN_CLIENT_ID": {
+      "required": true
+    },
+    "LINKEDIN_CLIENT_SECRET": {
+      "required": true
+    },
+    "LOB_API_KEY": {
+      "required": true
+    },
+    "MAIL_DRIVER": {
+      "required": true
+    },
+    "MAIL_ENCRYPTION": {
+      "required": true
+    },
+    "MAIL_HOST": {
+      "required": true
+    },
+    "MAIL_PASSWORD": {
+      "required": true
+    },
+    "MAIL_PORT": {
+      "required": true
+    },
+    "MAIL_USERNAME": {
+      "required": true
+    },
+    "NYT_BOOKS_API_KEY": {
+      "required": true
+    },
+    "SLACK_TOKEN": {
+      "required": true
+    },
+    "TUMBLR_API_KEY": {
+      "required": true
+    },
+    "TUMBLR_APP_SECRET": {
+      "required": true
+    },
+    "TWILIO_FROM": {
+      "required": true
+    },
+    "TWILIO_SID": {
+      "required": true
+    },
+    "TWILIO_TOKEN": {
+      "required": true
+    },
+    "TWITTER_ACCESS_TOKEN": {
+      "required": true
+    },
+    "TWITTER_ACCESS_TOKEN_SECRET": {
+      "required": true
+    },
+    "TWITTER_API_KEY": {
+      "required": true
+    },
+    "TWITTER_APP_SECRET": {
+      "required": true
+    },
+    "TWITTER_CALLBACK_URL": {
+      "required": true
+    }
+  },
+  "addons": [
+    "cleardb",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
+}
