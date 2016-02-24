@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Buzz\Browser;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use MetalMatze\LastFm\LastFm;
+use Dandelionmood\LastFm\LastFm;
 
 class LastFmController extends Controller
 {
@@ -22,12 +22,11 @@ class LastFmController extends Controller
      */
     public function __construct()
     {
-         $this->lastfm = new LastFm(new Browser);
-         $this->lastfm->setApiKey(env('LASTFM_API_KEY'));
+        $this->lastfm = new LastFm(env('LASTFM_API_KEY'), env('LASTFM_API_SECRET'));
     }
 
     /**
-     * Return all tweets to the Twitter API dashboard
+     * Return all tweets to the LastFM API dashboard
      * @return mixed
      */
     public function getPage()
@@ -49,7 +48,7 @@ class LastFmController extends Controller
      */
     private function getArtistInfo()
     {
-        $result = json_decode($this->lastfm->artist_getInfo(['artist' => 'The Pierces']), true);
+        $result = (array)$this->lastfm->artist_getInfo(['artist' => 'The Pierces']);
 
         return $result['artist'];
     }
@@ -60,9 +59,9 @@ class LastFmController extends Controller
      */
     private function getTopAlbums()
     {
-        $result = json_decode($this->lastfm->artist_getTopAlbums(['artist' => 'The Pierces']), true);
+        $result = (array)$this->lastfm->artist_getTopAlbums(['artist' => 'The Pierces']);
 
-        return $result['topalbums']['album'];
+        return $result['topalbums']->album;
     }
 
     /**
@@ -71,8 +70,8 @@ class LastFmController extends Controller
      */
     private function getTopTracks()
     {
-        $result = json_decode($this->lastfm->artist_getTopTracks(['artist' => 'The Pierces']), true);
+        $result = (array)$this->lastfm->artist_getTopTracks(['artist' => 'The Pierces']);
 
-        return $result['toptracks']['track'];
+        return $result['toptracks']->track;
     }
 }

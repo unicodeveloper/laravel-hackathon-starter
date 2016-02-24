@@ -13,7 +13,6 @@
         "jrm2k6/cloudder": "^0.2.2",
         "graham-campbell/github": "^4.2",
         "thujohn/twitter": "^2.1",
-        "metalmatze/lastfm-api-wrapper": "dev-master",
         "aloha/twilio": "^2.0",
         "fabpot/goutte": "^3.1",
         "mjerwin/clockwork-sms": "^0.9.1",
@@ -23,7 +22,8 @@
         "linkedinapi/linkedin": "^1.1",
         "socialiteproviders/foursquare": "^1.1",
         "hownowstephen/php-foursquare": "1.2.*",
-        "jaapz/tumblr": "dev-master"
+        "jaapz/tumblr": "dev-master",
+        "dandelionmood/lastfm": "^0.6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
