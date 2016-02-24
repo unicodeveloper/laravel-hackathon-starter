@@ -626,6 +626,9 @@ Thank you for considering contributing to Laravel Hackathon Starter. The contrib
 
 If you discover a security vulnerability within Laravel Hackathon Starter, please send an e-mail to Prosper Otemuyiwa at prosperotemuyiwa@gmail.com. All security vulnerabilities will be promptly addressed.
 
+## Credits
+* [Sahat Yalkabov](https://github.com/sahat/hackathon-starter) - Awesome
+
 ## How can I thank you?
 
 Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter or HackerNews? Spread the word!
