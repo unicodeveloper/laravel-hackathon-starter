@@ -522,21 +522,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Book;
+use App\Book;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class BookController extends Controller
 {
     /**
-     * Return all data to the Stripe API dashboard
+     * Return all books
      * @return mixed
      */
-    public function getPage()
+    public function getBooks()
     {
         $books = Book::all();
 
-        return view('api.book')->withBooks($books);
+        return view('books')->withBooks($books);
     }
 }
 ```
@@ -554,8 +554,8 @@ class BookController extends Controller
         </div>
 
         <ul>
-        @foreach ($books in $book)
-            <li> $book->name </li>
+        @foreach ($books as $book)
+            <li> {{ $book->name }} </li>
         @endforeach
         </div>
     </div>
