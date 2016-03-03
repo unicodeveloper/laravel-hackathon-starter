@@ -80,7 +80,7 @@ here is another great tutorial for building a project management app for beginne
 Getting Started
 ---------------
 
-The easiest way to get started is to clone the repository:
+#### Via Cloning The Repository:
 
 ```bash
 # Get the project
@@ -99,7 +99,27 @@ php artisan migrate
 
 php artisan serve
 ```
-# This starter pack includes the following APIs. You will need to obtain appropriate credentials like Client ID, zClient secret, API key, or Username & Password by going through each provider and generate new credentials.
+
+#### Via The Installer:
+
+First, download the Laravel Hackathon Starter Pack Installer using Composer:
+
+    composer global require "unicodeveloper/hackathon-installer"
+
+Make sure to place the `~/.composer/vendor/bin` directory (or the equivalent directory for your OS) in your PATH so the `larathon` executable can be located by your system.
+
+Once installed, the `larathon new` command will create a fresh Laravel Hackathon Starter Pack installation in the directory you specify. For instance, `larathon new mvp` will create a directory named `mvp` containing a fresh Laravel Hackathon Starter Pack installation with all of it's dependencies already installed. This method of installation is much faster than installing via Composer:
+
+    larathon new mvp
+
+#### Via Composer Create-Project
+
+Alternatively, you may also install Laravel Hackathon Starter Pack by issuing the Composer `create-project` command in your terminal:
+
+    composer create-project --prefer-dist unicodeveloper/laravel-hackathon-starter hotel
+
+This starter pack includes the following APIs. You will need to obtain appropriate credentials like Client ID, zClient secret, API key, or Username & Password by going through each provider and generate new credentials.
+
 * Cloudder
 * Twitter
 * Twillo
