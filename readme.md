@@ -97,22 +97,19 @@ composer install
 # Run your migrations
 php artisan migrate
 
-# Publish the config files for the different service providers for Cloudder, Laravel Github, Slack,Twitter, Twilio by quickly checking their readme and following the steps
-*[Cloudder](https://github.com/jrm2k6/cloudder)
-*[Twitter](https://github.com/thujohn/twitter)
-*[Twilio](https://github.com/aloha/laravel-twilio)
-*[Github](https://github.com/GrahamCampbell/Laravel-GitHub)
-*[Slack](https://github.com/vluzrmos/laravel-slack-api)
-*[Socialite Providers](https://github.com/SocialiteProviders/Instagram)
-*[Socialite LinkedIn](https://github.com/SocialiteProviders/LinkedIn)
-
 php artisan serve
 ```
+# This starter pack includes the following APIs. You will need to obtain appropriate credentials like Client ID, zClient secret, API key, or Username & Password by going through each provider and generate new credentials.
+* Cloudder
+* Twitter
+* Twillo
+* Github
+* Slack
+* Socialite Providers
+* Socialite LinkedIn
 
 Obtaining API Keys
 ------------------
-
-To use any of the included APIs or OAuth authentication methods, you will need to obtain appropriate credentials: Client ID, Client Secret, API Key, or Username & Password. You will need to go through each provider to generate new credentials.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1000px-Google_2015_logo.svg.png" width="200">
 - Visit [Google Cloud Console](https://cloud.google.com/console/project)
@@ -281,6 +278,8 @@ The same goes for other providers.
 - Sign up for an account.
 - Once logged into the dashboard, expand the link 'show api credentials'
 - Copy your Account Sid and Auth Token
+
+run ```php artisan vendor:publish```
 
 Project Structure
 -----------------
@@ -522,21 +521,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Book;
+use App\Book;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class BookController extends Controller
 {
     /**
-     * Return all data to the Stripe API dashboard
+     * Return all books
      * @return mixed
      */
-    public function getPage()
+    public function getBooks()
     {
         $books = Book::all();
 
-        return view('api.book')->withBooks($books);
+        return view('books')->withBooks($books);
     }
 }
 ```
@@ -554,8 +553,8 @@ class BookController extends Controller
         </div>
 
         <ul>
-        @foreach ($books in $book)
-            <li> $book->name </li>
+        @foreach ($books as $book)
+            <li> {{ $book->name }} </li>
         @endforeach
         </div>
     </div>
