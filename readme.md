@@ -309,7 +309,7 @@ Project Structure
 | **config**/app.php                       | Configuration for service providers and facades              |
 | **config**/auth.php                      | Configuration for password resets                            |
 | **config**/broadcasting.php              | Configuration for broadcasting                               |
-| **config**/cache.php                     | Configuration for cache generation and storagr               |
+| **config**/cache.php                     | Configuration for cache generation and storage               |
 | **config**/cloudder.php                  | Configuration for cloudinary                                 |
 | **config**/compile.php                   | Configuration for compilation                                |
 | **config**/database.php                  | Configuration for database drivers                           |
@@ -317,7 +317,7 @@ Project Structure
 | **config**/github.php                    | Configuration for github API                                 |
 | **config**/mail.php                      | Configuration for mails                                      |
 | **config**/queue.php                     | Configuration for queue                                      |
-| **config**/services.php                  | Configuration for several services like mailgun et.c         |
+| **config**/services.php                  | Configuration for several services like mailgun etc.         |
 | **config**/session.php                   | Configuration for sessions                                   |
 | **config**/ttwitter.php                  | Twitter API config file                                      |
 | **config**/twilio.php                    | Twilio API config file                                       |
@@ -340,7 +340,7 @@ Project Structure
 | **controllers**/WebScrapingController.php| Controller for Web Scraping.                                 |
 | **controllers**/YahooController.php      | Controller for Yahoo API functionality                       |
 | **controllers**/user.js                  | Controller for user account management.                      |
-| **models**/User.php                      | Moodel for User.                                             |
+| **models**/User.php                      | Model for User.                                             |
 | **public**/                              | Static assets (fonts, css, js, img).                         |
 | **public**/**css**/main.css              | Main stylesheet for your app.                                |
 | **resources/views/account**/             | Templates for *login, password reset, signup, profile*.      |
