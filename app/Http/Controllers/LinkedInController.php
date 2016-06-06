@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use Auth;
 use Session;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use LinkedIn\LinkedIn;
 use GuzzleHttp\Client;
 
 class LinkedInController extends Controller
 {
-     /**
+    const LINKEDIN_API = 'https://api.linkedin.com/v1';
+
+    /**
      * LinkedIn API base Url
      * @var string
      */
@@ -36,7 +34,7 @@ class LinkedInController extends Controller
      */
     public function __construct()
     {
-        $this->baseUrl = 'https://api.linkedin.com/v1';
+        $this->baseUrl = self::LINKEDIN_API;
         $this->client = new Client(['base_uri' => $this->baseUrl]);
     }
 

@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use Goutte\Client;
-use App\Http\Controllers\Controller;
 
 class WebScrapingController extends Controller
 {
     protected $crawler;
 
+    const NEWS_URL = 'https://news.ycombinator.com/';
+
     /**
-     * [__construct description]
+     * Initialize controller
      */
     public function __construct()
     {
@@ -26,7 +25,7 @@ class WebScrapingController extends Controller
      */
     public function getPage()
     {
-        $links = $this->getData('https://news.ycombinator.com/');
+        $links = $this->getData(self::NEWS_URL);
 
         return view('api.scraping')->withLinks($links);
     }

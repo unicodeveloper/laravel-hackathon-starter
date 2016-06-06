@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 use Lob\Lob;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class LobController extends Controller
 {
+    const ZIPCODE = '10007';
     /**
      * LOB API KEY
      * @var string
@@ -33,7 +32,7 @@ class LobController extends Controller
 
     /**
      * Get all delivery routes for this zip code
-     * @param  string $zipcdode
+     * @param string $zipcode
      * @return array
      */
     private function getRoutes($zipcode)
@@ -49,7 +48,7 @@ class LobController extends Controller
      */
     public function getPage()
     {
-        $routes = $this->getRoutes('10007');
+        $routes = $this->getRoutes(self::ZIPCODE);
 
         return view('api.lob')->withRoutes($routes);
     }

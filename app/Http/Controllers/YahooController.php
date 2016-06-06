@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use GuzzleHttp\Client;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class YahooController extends Controller
 {
-     /**
+    const YAHOO_API = 'https://query.yahooapis.com/v1/public/yql';
+    /**
      * Instance of Guzzle Client
      * @var object
      */
@@ -27,7 +25,7 @@ class YahooController extends Controller
      */
     public function __construct()
     {
-         $this->baseUrl = 'https://query.yahooapis.com/v1/public/yql';
+         $this->baseUrl = self::YAHOO_API;
          $this->client = new Client(['base_uri' => $this->baseUrl]);
 
          $query = "SELECT * FROM weather.forecast WHERE (location = 10007)";

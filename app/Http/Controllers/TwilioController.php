@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use Twilio;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class TwilioController extends Controller
 {
@@ -36,6 +35,6 @@ class TwilioController extends Controller
 
         Twilio::message($number, $message);
 
-        return redirect()->back()->with('info','Your Message has been sent successfully');
+        return redirect()->back()->with('info', trans('texts.message.sent_success'));
     }
 }
