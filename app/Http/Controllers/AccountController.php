@@ -7,10 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Hash;
 use Cloudder;
-use App\User;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
 
 class AccountController extends Controller
 {
@@ -19,15 +16,13 @@ class AccountController extends Controller
 
     public function __construct()
     {
-        $this->id = Auth::user()->id;
-        $this->user = User::findOrFail($this->id);
+        $this->user = Auth::user();
+        $this->id = $this->user->id;
     }
 
     public function getAccountPage()
     {
-        $details = User::whereId($this->id)->first();
-
-        return view('account.dashboard')->withAccount($details);
+        return view('account.dashboard')->withAccount($this->user);
     }
 
     /**
