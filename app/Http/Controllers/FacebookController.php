@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Facebook;
-use App\User;
 use Auth;
 use Session;
-use Illuminate\Support\Collection;
 
 class FacebookController extends Controller
 {
@@ -22,7 +17,7 @@ class FacebookController extends Controller
      */
     public function getPage()
     {
-        if( Session::get('provider') !== 'facebook') {
+        if(Session::get('provider') !== 'facebook') {
             Auth::logout();
 
             Session::flush();
@@ -35,9 +30,9 @@ class FacebookController extends Controller
         return view('api.facebook')->withDetails($userDetails);
     }
 
+
     /**
-     * [getData description]
-     * @return [type] [description]
+     * @return mixed
      */
     private function getData()
     {

@@ -3,14 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\User;
 use App\Http\Requests;
 use Illuminate\Contracts\Auth\Guard;
-use App\Http\Controllers\Controller;
 use Laravel\Socialite\Contracts\Factory as Socialite;
 use Session;
-
 
 class OauthController extends Controller
 {
@@ -42,8 +39,11 @@ class OauthController extends Controller
 
     /**
      * Find a user by username or create a new user
-     * @param
-     * @return
+     *
+     * @param $userData
+     * @param $provider
+     *
+     * @return \App\User
      */
     public function findByProviderIdOrCreate($userData, $provider)
     {
@@ -92,8 +92,8 @@ class OauthController extends Controller
 
     /**
      * Check if the user's info needs updating
-     * @param
-     * @return
+     * @param $userData
+     * @param $user
      */
     public function checkIfUserNeedsUpdating($userData, $user)
     {
@@ -136,6 +136,4 @@ class OauthController extends Controller
     {
         return $this->socialite->driver($provider)->user();
     }
-
 }
-

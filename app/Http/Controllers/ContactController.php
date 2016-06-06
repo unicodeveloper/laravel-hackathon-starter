@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use Auth;
 use Mail;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class ContactController extends Controller
 {
@@ -32,10 +30,10 @@ class ContactController extends Controller
         Mail::send('emails.contact', ['body' => $body], function ($message) use ($name,$emailToSendTo) {
             $message->from('unicodeveloper@hackathon-starter.com', "From: {$name}");
 
-            $message->to($emailToSendTo)->subject("Message From Laravel Hackathon Starter Contact Form");
+            $message->to($emailToSendTo)->subject(trans('texts.contact.subject'));
         });
 
-        return redirect()->route('contact')->with('info','Your Message has been dispatched successfully');
+        return redirect()->route('contact')->with('info', trans('texts.contact.sent_success'));
     }
 
 }

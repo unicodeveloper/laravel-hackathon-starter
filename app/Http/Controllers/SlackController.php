@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use SlackUser;
 use SlackChat;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class SlackController extends Controller
 {
@@ -52,6 +50,6 @@ class SlackController extends Controller
 
         SlackChat::message('#general', $message);
 
-        return redirect()->back()->with('info','Your Message has been sent successfully');
+        return redirect()->back()->with('info', trans('texts.message.sent_success'));
     }
 }

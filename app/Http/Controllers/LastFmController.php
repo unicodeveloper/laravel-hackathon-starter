@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use Buzz\Browser;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Dandelionmood\LastFm\LastFm;
 
 class LastFmController extends Controller
 {
+    /**
+     * @var array
+     */
+    protected $sampleArtist = ['artist' => 'The Pierces'];
+
     /**
      * LastFm Object
      * @var object;
@@ -48,7 +49,7 @@ class LastFmController extends Controller
      */
     private function getArtistInfo()
     {
-        $result = (array)$this->lastfm->artist_getInfo(['artist' => 'The Pierces']);
+        $result = (array)$this->lastfm->artist_getInfo($this->sampleArtist);
 
         return $result['artist'];
     }
@@ -59,7 +60,7 @@ class LastFmController extends Controller
      */
     private function getTopAlbums()
     {
-        $result = (array)$this->lastfm->artist_getTopAlbums(['artist' => 'The Pierces']);
+        $result = (array)$this->lastfm->artist_getTopAlbums($this->sampleArtist);
 
         return $result['topalbums']->album;
     }
@@ -70,7 +71,7 @@ class LastFmController extends Controller
      */
     private function getTopTracks()
     {
-        $result = (array)$this->lastfm->artist_getTopTracks(['artist' => 'The Pierces']);
+        $result = (array)$this->lastfm->artist_getTopTracks($this->sampleArtist);
 
         return $result['toptracks']->track;
     }

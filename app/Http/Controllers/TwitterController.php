@@ -7,7 +7,6 @@ use Twitter;
 use Session;
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class TwitterController extends Controller
 {
@@ -80,6 +79,6 @@ class TwitterController extends Controller
 
         Twitter::postTweet(['status' => $tweet, 'format' => 'json']);
 
-        return redirect()->back()->with('info','Your Tweet has been posted successfully');
+        return redirect()->back()->with('info', trans('texts.twitter.success'));
     }
 }

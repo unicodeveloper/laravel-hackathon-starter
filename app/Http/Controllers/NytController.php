@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
 use App\Http\Requests;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class NytController extends Controller
 {
+    const API_URL = 'http://api.nytimes.com/svc';
+    const RELATIVE_URL = '/books/v3/lists/overview.json?api-key={apiKey}';
 
     /**
      * Instance of Guzzle Client
@@ -27,11 +27,19 @@ class NytController extends Controller
      */
     public function __construct()
     {
-         $this->baseUrl = 'http://api.nytimes.com/svc';
+         $this->baseUrl = self::API_URL;
          $this->client = new Client(['base_uri' => $this->baseUrl]);
+         $this->setGetResponse($this->getRelativeUrl());
+    }
 
-         $relativeUrl = '/books/v3/lists/overview.json?api-key=' . env('NYT_BOOKS_API_KEY');
-         $this->setGetResponse($relativeUrl);
+    /**
+     * Get relative url
+     *
+     * @return string
+     */
+    public function getRelativeUrl()
+    {
+        return str_replace('{apiKey}', env('NYT_BOOKS_API_KEY'), self::RELATIVE_URL);
     }
 
     /**
