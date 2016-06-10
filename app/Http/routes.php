@@ -25,13 +25,13 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', [
+    'as' => 'home', 'uses' => 'PageController@home'
+        ]);
 
-    Route::get('/api', function () {
-        return view('apidashboard');
-    });
+    Route::get('/api', [
+    'as' => 'api', 'uses' => 'PageController@api'
+        ]);
 
     Route::group(['prefix' => 'api'], function() {
         Route::get('github', [
