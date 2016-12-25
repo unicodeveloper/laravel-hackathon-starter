@@ -89,7 +89,19 @@ git clone https://github.com/unicodeveloper/laravel-hackathon-starter.git hackat
 # Change directory
 cd hackathon-starter-pack
 
-# Rename env.example to .env and fill in all the keys and secrets and also generate a secure key for the app using `php artisan key:generate`
+# Copy .env.example to .env
+cp .env.example .env
+
+# Generate application secure key (in .env file)
+php artisan key:generate
+
+# Create a database (with mysql or postgresql)
+# And update .env file with database credentials
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_DATABASE=laravelhackathon
+# DB_USERNAME=root
+# DB_PASSWORD=root
 
 # Install Composer dependencies
 composer install
