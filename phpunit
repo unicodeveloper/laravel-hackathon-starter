@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Run project's phpunit version to avoid frameworks conflicts/uncompatibility
+#
+./vendor/phpunit/phpunit/phpunit
+
