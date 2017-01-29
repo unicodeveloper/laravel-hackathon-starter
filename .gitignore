@@ -3,3 +3,12 @@
 Homestead.yaml
 Homestead.json
 .env
+
+# barryvdh/laravel-ide-helper generated files
+_ide_helper.php
+
+# Eclipse stuff
+.buildpath
+.project
+.settings/
+
