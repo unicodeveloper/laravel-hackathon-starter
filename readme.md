@@ -64,7 +64,7 @@ Features
 Prerequisites
 -------------
 
-- [Mysql or Postgresql](https://www.mysql.com/ or http://www.postgresql.org/)
+- [Mysql](https://www.mysql.com/) or [Postgresql](http://www.postgresql.org/)
 - [PHP 5.4+](http://php.net/)
 - Command Line Tools
  - <img src="http://deluge-torrent.org/images/apple-logo.gif" height="17">&nbsp;**Mac OS X:** [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) (or **OS X 10.9+**: `xcode-select --install`)
