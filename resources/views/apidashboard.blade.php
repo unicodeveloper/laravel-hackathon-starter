@@ -178,6 +178,15 @@
                     </div>
                 </a>
             </div>
+            <div class="col-sm-4">
+                <a href="{{route('api.voguepay')}}" style="color: #fff">
+                    <div style="background-color: #3D567B" class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="https://voguepay.com/images/logo.png" height="40"> VougePay
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 @stop

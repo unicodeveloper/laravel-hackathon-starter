@@ -141,6 +141,10 @@ Route::group(['middleware' => ['web']], function () {
             'uses' => 'TumblrController@getPage',
             'as'   => 'api.tumblr'
         ]);
+        Route::get('voguepay', [
+            'uses' => 'VoguepayController@getPage',
+            'as'   => 'api.voguepay'
+        ]);
     });
 
     Route::post('/slack/message', [
