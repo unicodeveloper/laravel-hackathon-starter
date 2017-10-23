@@ -257,7 +257,7 @@ The same goes for other providers.
 
 <hr>
 
-<img src="http://img4.wikia.nocookie.net/__cb20130520163346/logopedia/images/8/8d/Tumblr_logo_by_x_1337_x-d5ikwpp.png" width="200">
+<img src="http://www.seeicons.com/images/iconstore/512/seeicons__5783397793c69.png" width="200">
 - Go to http://www.tumblr.com/oauth/apps
 - Once signed in, click **+Register application**
 - Fill in all the details
