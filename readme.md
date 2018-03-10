@@ -92,6 +92,9 @@ cd hackathon-starter-pack
 # Copy .env.example to .env
 cp .env.example .env
 
+# Install Composer dependencies
+composer install
+
 # Generate application secure key (in .env file)
 php artisan key:generate
 
@@ -102,9 +105,6 @@ php artisan key:generate
 # DB_DATABASE=laravelhackathon
 # DB_USERNAME=root
 # DB_PASSWORD=root
-
-# Install Composer dependencies
-composer install
 
 # Run your migrations
 php artisan migrate
