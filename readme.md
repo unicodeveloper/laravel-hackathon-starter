@@ -92,9 +92,6 @@ cd hackathon-starter-pack
 # Copy .env.example to .env
 cp .env.example .env
 
-# Generate application secure key (in .env file)
-php artisan key:generate
-
 # Create a database (with mysql or postgresql)
 # And update .env file with database credentials
 # DB_CONNECTION=mysql
@@ -106,8 +103,8 @@ php artisan key:generate
 # Install Composer dependencies
 composer install
 
-# Run your migrations
-php artisan migrate
+# Generate application secure key (in .env file)
+php artisan key:generate
 
 php artisan serve
 ```
