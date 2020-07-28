@@ -1,0 +1,7 @@
+name: Hackathon Starter Pack PHP
+tasks:
+  start:
+    command: php artisan serve --port=$OPTIC_API_PORT
+    baseUrl: http://localhost:4000
+ignoreRequests:
+- OPTIONS *

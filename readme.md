@@ -60,6 +60,7 @@ Features
  - Delete Account
  - CSRF protection
  - **API Examples**: Facebook, Foursquare, Last.fm, Tumblr, Twitter, Stripe, LinkedIn and more.
+- **Automatic Documentation**
 
 Prerequisites
 -------------
@@ -72,6 +73,7 @@ Prerequisites
  - <img src="https://lh5.googleusercontent.com/-2YS1ceHWyys/AAAAAAAAAAI/AAAAAAAAAAc/0LCb_tsTvmU/s46-c-k/photo.jpg" height="17">&nbsp;**Ubuntu** / <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_Linux_Mint.png" height="17">&nbsp;**Linux Mint:** `sudo apt-get install build-essential`
  - <img src="http://i1-news.softpedia-static.com/images/extra/LINUX/small/slw218news1.png" height="17">&nbsp;**Fedora**: `sudo dnf groupinstall "Development Tools"`
  - <img src="https://en.opensuse.org/images/b/be/Logo-geeko_head.png" height="17">&nbsp;**OpenSUSE:** `sudo zypper install --type pattern devel_basis`
+ - <img src="https://global-uploads.webflow.com/5ea1b599e88dc9edc465e8f5/5ea8b30dd43a0b44bbc91bd8_favicon-32x32.png" height="17">&nbsp;**Optic:** `npm install -g @useoptic/cli` (needed for automatic documentation)
 
 **Note:** If you are new to Laravel, I recommend to watch
 [Laravel From Scratch](https://laracasts.com/series/laravel-5-from-scratch) screencast by Jeffery Way that teaches Laravel 5 from scratch. Alternatively,
@@ -434,6 +436,28 @@ Recommended Laravel Libraries
 - [laravel-medialibrary](https://github.com/spatie/laravel-medialibrary) - Associated media files with your Eloquent models easily.
 - [laravel-emoji](https://github.com/unicodeveloper/laravel-emoji) - For using emojis in your app
 - [laravel-quotes](https://github.com/unicodeveloper/laravel-quotes) - For using all sorts of quotes especially DJKHALED in your app
+
+Enabling Automatic Documentation
+-----------------------------
+Using [Optic](https://github.com/opticdev/optic), you can use your API like normal, automatically documenting changes in behavior. To enable this, you'll first need to download Optic.
+
+```bash
+    npm install -g @useoptic/cli
+```
+
+Once you've installed Optic, you can start documenting your requests by running `api start`. Running this command will create a proxied version of your api, available at [localhost:4000](http://localhost:4000) - now, you can use the API like normal here, and Optic will automatically notice differences in the documented behavior, allowing you to automatically create documentation as your API changes.
+
+To view the current documentation of the api, run `api spec` at the root directory.
+
+#### Useful Commands
+
+```bash
+    api start # use this to start monitoring your API
+    api spec # use this to inspect the current documentation of your API
+    api generate:oas # generates an OpenAPI specification for your currently documented API
+```
+
+For more information about Optic, [check out the docs](https://docs.useoptic.com).
 
 
 FAQ
